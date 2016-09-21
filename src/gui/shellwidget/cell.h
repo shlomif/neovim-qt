@@ -81,6 +81,7 @@ inline bool operator==(const Cell& c1, const Cell& c2)
 	}
 
 	return (c1.c == c2.c
+			&& c1.lowSurrogate  == c2.lowSurrogate
 			&& c1.foregroundColor == c2.foregroundColor
 			&& c1.backgroundColor == c2.backgroundColor
 			&& c1.specialColor == c2.specialColor

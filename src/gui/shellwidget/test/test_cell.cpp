@@ -60,6 +60,10 @@ private slots:
 		c1.setLowSurrogate(QChar(57232));
 		QCOMPARE(c1.text(), QString("🎐"));
 		QCOMPARE(c1.doubleWidth, true);
+
+		Cell c2 = c1;
+		c2.setLowSurrogate(QChar(57231));
+		QVERIFY(!(c1 == c2));
 	}
 };
 
