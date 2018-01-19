@@ -220,8 +220,10 @@ void ShellWidget::paintEvent(QPaintEvent *ev)
 #endif
 }
 
+#include <iostream>
 void ShellWidget::resizeEvent(QResizeEvent *ev)
 {
+	std::cerr << "Pinkie" << std::endl;
 	int cols = ev->size().width() / m_cellSize.width();
 	int rows = ev->size().height() / m_cellSize.height();
 	resizeShell(rows, cols);
