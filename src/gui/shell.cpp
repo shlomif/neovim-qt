@@ -516,6 +516,7 @@ void Shell::handleRedraw(const QByteArray& name, const QVariantList& opargs)
 		handlePopupMenuSelect(opargs.at(0).toLongLong());
 	} else if (name == "popupmenu_hide") {
 		m_pum.hide();
+    }
 #if 0
 	else {
 		qDebug() << "Received unknown redraw notification" << name << opargs;
